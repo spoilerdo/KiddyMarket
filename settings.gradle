@@ -1,0 +1,6 @@
+rootProject.name = 'com.kiddyMarket'
+include 'Data'
+include 'Domain'
+include 'Services'
+include 'Web'
+

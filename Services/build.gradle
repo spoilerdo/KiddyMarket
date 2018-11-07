@@ -1,0 +1,20 @@
+
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+    baseName = "com.kiddyMarket-services"
+    version = "1.0"
+}
+
+dependencies{
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("org.springframework.boot:spring-boot-starter-security")
+    compile group: 'org.mindrot', name: 'jbcrypt', version: '0.4'
+    compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.2'
+    compile project(':Domain')
+    compile project(':Data')
+}
