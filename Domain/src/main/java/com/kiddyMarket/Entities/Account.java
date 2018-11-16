@@ -26,4 +26,8 @@ public class Account extends ResourceSupport {
     public void setAccountId(int accountId) {
         this.accountId = accountId;
     }
+
+    public int getAccountId() {
+        return accountId;
+    }
 }

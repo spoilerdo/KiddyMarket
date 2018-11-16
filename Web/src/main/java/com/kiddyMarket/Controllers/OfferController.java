@@ -34,10 +34,10 @@ public class OfferController {
         return new ResponseEntity<>(updatedOffer, HttpStatus.OK);
     }
 
-    @PostMapping(path = "/accept/{id}")
+    @PostMapping(path = "/accept")
     @ResponseStatus(HttpStatus.OK)
-    public void acceptOffer(@RequestBody Offer offer ,@PathVariable("id") int accountId){
-        offerLogic.acceptOffer(offer, accountId);
+    public void acceptOffer(@RequestBody Offer offer){
+        offerLogic.acceptOffer(offer);
     }
 
     @GetMapping(path = "/all")
