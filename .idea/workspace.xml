@@ -2,19 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0da87fbc-d81e-49f5-8ebe-7292be8f8d6b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Data/src/main/resources/aplication.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/ItemTransfer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/MoneyTransfer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/Helper/RestCallLogic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Wrappers/AccountFormWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Wrappers/AccountWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Wrappers/BankAccountWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Wrappers/LoginWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/AccountLogic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/LogicInterfaces/IAccountLogic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/JwtAuthenticationProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Wrapper/LoginWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Wrapper/TokenWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/out/production/classes/com/kiddyMarket/Entities/Offer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/out/production/classes/com/kiddyMarket/Entities/Offer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/out/production/resources/aplication.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/src/main/resources/aplication.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Data/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/out/production/classes/com/kiddyMarket/Entities/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/out/production/classes/com/kiddyMarket/Entities/Account.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/out/production/classes/com/kiddyMarket/Logic/AuthLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/Services/out/production/classes/com/kiddyMarket/Logic/AuthLogic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/out/production/classes/com/kiddyMarket/Logic/Constants/APIConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/Services/out/production/classes/com/kiddyMarket/Logic/Constants/APIConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/out/production/classes/com/kiddyMarket/Logic/Helper/RestCallLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/Services/out/production/classes/com/kiddyMarket/Logic/Helper/RestCallLogic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/out/production/classes/com/kiddyMarket/Logic/OfferLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/Services/out/production/classes/com/kiddyMarket/Logic/OfferLogic.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/AuthLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/AuthLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/Constants/AuthConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/Constants/APIConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/Constants/APIConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/Constants/APIConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/Helper/RestCallLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/Helper/RestCallLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/OfferLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/OfferLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/LogicInterfaces/IOfferLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/LogicInterfaces/IOfferLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Web/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/out/production/classes/com/kiddyMarket/Controllers/OfferController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Web/out/production/classes/com/kiddyMarket/Controllers/OfferController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/out/production/classes/com/kiddyMarket/Security/WebSecurity.class" beforeDir="false" afterPath="$PROJECT_DIR$/Web/out/production/classes/com/kiddyMarket/Security/WebSecurity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Controllers/OfferController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Controllers/OfferController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/Constants/SecurityConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/Constants/SecurityConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/WebSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/WebSecurity.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -37,52 +59,94 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@kiddymarketserver.database.windows.net" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="com.kiddyMarket" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1272926612">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.2" value="3" />
+          <entry key="project.open.time.1" value="5" />
+          <entry key="project.open.time.2" value="6" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.29" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="gradle" value="17" />
-          <entry key="java" value="42" />
-          <entry key="properties" value="1" />
+          <entry key="gradle" value="36" />
+          <entry key="gradlew" value="1" />
+          <entry key="java" value="92" />
+          <entry key="properties" value="7" />
+          <entry key="sql" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Groovy" value="17" />
-          <entry key="JAVA" value="42" />
-          <entry key="Properties" value="1" />
+          <entry key="Groovy" value="36" />
+          <entry key="JAVA" value="92" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Properties" value="7" />
+          <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="37" />
-          <entry key="gradle" value="63" />
-          <entry key="java" value="9936" />
-          <entry key="properties" value="26" />
+          <entry key="dummy" value="44" />
+          <entry key="gradle" value="68" />
+          <entry key="java" value="15316" />
+          <entry key="properties" value="36" />
+          <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="63" />
-          <entry key="JAVA" value="9936" />
-          <entry key="PLAIN_TEXT" value="37" />
-          <entry key="Properties" value="26" />
+          <entry key="Groovy" value="68" />
+          <entry key="JAVA" value="15316" />
+          <entry key="PLAIN_TEXT" value="55" />
+          <entry key="Properties" value="36" />
         </counts>
       </usages-collector>
     </session>
@@ -90,99 +154,53 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Offer.java">
+        <entry file="file://$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/JwtAuthenticationProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+            <state relative-caret-position="594">
+              <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
               <folding>
-                <element signature="method#Offer#1;class#Offer#0" />
+                <element signature="e#1236#1237#0" expanded="true" />
+                <element signature="e#1290#1291#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/AuthLogic.java">
+        <entry file="file://$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/WebSecurity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="38" column="61" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/Constants/APIConstants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="79" selection-start-line="6" selection-start-column="79" selection-end-line="6" selection-end-column="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/LogicInterfaces/IOfferLogic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/OfferLogic.java">
+        <entry file="file://$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/JwtAuthenticationFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+            <state relative-caret-position="429">
+              <caret line="75" column="30" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#OfferLogic#0;class#OfferLogic#0" />
-                <element signature="e#3038#3039#0" expanded="true" />
-                <element signature="e#3123#3124#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/ItemTransfer.java">
+        <entry file="file://$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/Constants/SecurityConstants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="67" selection-start-line="7" selection-start-column="67" selection-end-line="7" selection-end-column="67" />
+            <state relative-caret-position="153">
+              <caret line="9" column="79" lean-forward="true" selection-start-line="9" selection-start-column="79" selection-end-line="9" selection-end-column="79" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Controllers/OfferController.java">
+        <entry file="file://$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/JwtAuthorizationFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1053#1054#0" expanded="true" />
-                <element signature="e#1100#1101#0" expanded="true" />
-                <element signature="e#1547#1548#0" expanded="true" />
-                <element signature="e#1592#1593#0" expanded="true" />
-                <element signature="method#getAllOffers#0;class#OfferController#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/Helper/RestCallLogic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="34" column="19" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="21" column="69" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -204,7 +222,7 @@
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$" value="C:\Users\Martijn\.gradle\wrapper\dists\gradle-4.8-bin\divx0s2uj4thofgytb7gf9fsi\gradle-4.8" />
+        <entry key="$PROJECT_DIR$" value="C:\Users\Martijn\.gradle\wrapper\dists\gradle-4.8-all\41c9mvq2w0645xx6nsenaerjl\gradle-4.8" />
       </map>
     </option>
     <option name="myGradleVersions">
@@ -1184,12 +1202,12 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="12332650411373" />
+        <entry key="$PROJECT_DIR$" value="12335719609010" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
         <entry key="$PROJECT_DIR$/Data/build.gradle" value="1310299710" />
         <entry key="$PROJECT_DIR$/Domain/build.gradle" value="2477319020" />
         <entry key="$PROJECT_DIR$/Services/build.gradle" value="2486725976" />
-        <entry key="$PROJECT_DIR$/Web/build.gradle" value="2509633809" />
+        <entry key="$PROJECT_DIR$/Web/build.gradle" value="3201064075" />
         <entry key="$PROJECT_DIR$/build.gradle" value="476544440" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2007532874" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="1532020355" />
@@ -1437,10 +1455,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/Data/build.gradle" />
         <option value="$PROJECT_DIR$/Services/build.gradle" />
-        <option value="$PROJECT_DIR$/Web/build.gradle" />
         <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/Data/src/main/java/com/kiddyMarket/DataInterfaces/IOfferRepository.java" />
         <option value="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/App.java" />
@@ -1450,21 +1466,35 @@
         <option value="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/JwtAuthorizationFilter.java" />
         <option value="$PROJECT_DIR$/Data/src/main/java/com/kiddyMarket/DataInterfaces/IAccountRepository.java" />
         <option value="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/Constant/SecurityConstants.java" />
-        <option value="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/WebSecurity.java" />
-        <option value="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/Constants/SecurityConstants.java" />
-        <option value="$PROJECT_DIR$/Data/src/main/resources/aplication.properties" />
         <option value="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/RestCall/RestCallLogic.java" />
-        <option value="$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Account.java" />
-        <option value="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/AuthLogic.java" />
-        <option value="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Controllers/OfferController.java" />
         <option value="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/Constants/AuthConstants.java" />
-        <option value="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/Constants/APIConstants.java" />
         <option value="$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Item.java" />
         <option value="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/LogicInterfaces/IOfferLogic.java" />
         <option value="$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/MoneyTransfer.java" />
         <option value="$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/ItemTransfer.java" />
-        <option value="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/Helper/RestCallLogic.java" />
+        <option value="$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Account.java" />
+        <option value="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/Helper/AccountLogic.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/AccountForm.java" />
+        <option value="$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Wrappers/AccountWrapper.java" />
+        <option value="$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Wrappers/BankAccountWrapper.java" />
+        <option value="$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Wrappers/AccountFormWrapper.java" />
+        <option value="$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Wrappers/LoginWrapper.java" />
+        <option value="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/LogicInterfaces/IAccountLogic.java" />
         <option value="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/OfferLogic.java" />
+        <option value="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/Helper/RestCallLogic.java" />
+        <option value="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/Constants/APIConstants.java" />
+        <option value="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/AccountLogic.java" />
+        <option value="$PROJECT_DIR$/Data/src/main/resources/aplication.properties" />
+        <option value="$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/AuthLogic.java" />
+        <option value="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Controllers/OfferController.java" />
+        <option value="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Wrapper/LoginWrapper.java" />
+        <option value="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/Constants/SecurityConstants.java" />
+        <option value="$PROJECT_DIR$/Web/build.gradle" />
+        <option value="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Wrapper/TokenWrapper.java" />
+        <option value="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/JwtAuthenticationProvider.java" />
+        <option value="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/WebSecurity.java" />
+        <option value="$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/JwtAuthenticationFilter.java" />
       </list>
     </option>
   </component>
@@ -1501,240 +1531,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Domain" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Domain" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Domain" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Domain" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Domain" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Domain" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="kiddyMarket" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Domain" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="kiddyMarket" type="462c0819:PsiDirectoryNode" />
-              <item name="Entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Services" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Services" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Services" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Services" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Services" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Services" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="kiddyMarket" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Services" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="kiddyMarket" type="462c0819:PsiDirectoryNode" />
-              <item name="Logic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Services" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="kiddyMarket" type="462c0819:PsiDirectoryNode" />
-              <item name="Logic" type="462c0819:PsiDirectoryNode" />
-              <item name="Constants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Services" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="kiddyMarket" type="462c0819:PsiDirectoryNode" />
-              <item name="Logic" type="462c0819:PsiDirectoryNode" />
-              <item name="Helper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="kiddyMarket" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="kiddyMarket" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="kiddyMarket" type="462c0819:PsiDirectoryNode" />
-              <item name="Security" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="Web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="kiddyMarket" type="462c0819:PsiDirectoryNode" />
-              <item name="Security" type="462c0819:PsiDirectoryNode" />
-              <item name="Constants" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="AndroidView" />
       <pane id="Scope">
         <subPane subId="Scope 'Tests'; set:Tests; class com.intellij.psi.search.scope.TestsScope">
           <expand>
             <path>
               <item name="com.kiddyMarket" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="Domain/Domain_test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="com.kiddyMarket" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Services/Services_test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="com.kiddyMarket" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Services/Services_test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.kiddyMarket" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Services/Services_test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com/kiddyMarket/LogicTests" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -1754,7 +1573,14 @@
               <item name="com.kiddyMarket" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="Domain/Domain_main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com/kiddyMarket/Entities" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com.kiddyMarket.Entities" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.kiddyMarket" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Domain/Domain_main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com.kiddyMarket.Entities" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Wrappers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="com.kiddyMarket" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -1769,30 +1595,144 @@
               <item name="com.kiddyMarket" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="Services/Services_main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com/kiddyMarket" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com.kiddyMarket" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="com.kiddyMarket" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="Services/Services_main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com/kiddyMarket" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com.kiddyMarket" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="Logic" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="com.kiddyMarket" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="Services/Services_main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com/kiddyMarket" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com.kiddyMarket" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="Logic" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="Constants" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="com.kiddyMarket" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Services/Services_main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="Web/Web_main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="com.kiddyMarket" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Web/Web_main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.kiddyMarket" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Web/Web_main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="com/kiddyMarket" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Logic" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Helper" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.kiddyMarket" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Web/Web_main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com/kiddyMarket" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com.kiddyMarket.Controllers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.kiddyMarket" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Web/Web_main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com/kiddyMarket" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Security" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Data" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Data" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Data" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Data" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kiddyMarket" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.kiddyMarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KiddyMarket" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Web" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kiddyMarket" type="462c0819:PsiDirectoryNode" />
+              <item name="Security" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1801,17 +1741,21 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="azure" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542365440920" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../KiddyInventory" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543426064709" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.5091954" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -1825,7 +1769,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OfferLogicTest">
+  <component name="RunManager" selected="Spring Boot.App">
     <configuration name="OfferLogicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Services_test" />
       <extension name="coverage">
@@ -1859,8 +1803,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.OfferLogicTest" />
         <item itemvalue="Spring Boot.App" />
+        <item itemvalue="JUnit.OfferLogicTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1881,12 +1825,24 @@
       <workItem from="1542010291117" duration="6734000" />
       <workItem from="1542181942189" duration="10185000" />
       <workItem from="1542192734493" duration="590000" />
-      <workItem from="1542354935843" duration="6094000" />
+      <workItem from="1542354935843" duration="9775000" />
+      <workItem from="1542786735563" duration="2743000" />
+      <workItem from="1542804708630" duration="5375000" />
+      <workItem from="1542965158964" duration="12502000" />
+      <workItem from="1543133298524" duration="71000" />
+      <workItem from="1543222201170" duration="799000" />
+      <workItem from="1543223024628" duration="7828000" />
+      <workItem from="1543417247684" duration="1317000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="OfferLogicTest - 2018.11.16 at 11h 50m 50s.xml">
+      <configuration name="OfferLogicTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30885000" />
+    <option name="totallyTimeSpent" value="65201000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1901,7 +1857,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23691276" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21208054" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1910,19 +1866,19 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.0" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.0" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.0" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3299566" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3342981" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3299566" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932885" weight="0.3299566" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.0" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.0" />
+      <window_info anchor="bottom" id="Spring" order="8" sideWeight="0.49932885" weight="0.3299566" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49932885" weight="0.3299566" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067115" side_tool="true" weight="0.31318682" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3299566" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1930,14 +1886,14 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Gradle" order="6" weight="0.3295302" />
+      <window_info anchor="right" id="Database" order="7" weight="0.3295302" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="Bean Validation" order="10" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.45769763" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20939597" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1946,19 +1902,19 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.0" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.0" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3299566" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3342981" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3299566" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.0" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" visible="true" weight="0.0" />
-      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3299566" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.0" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3299566" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1966,8 +1922,8 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Gradle" order="6" weight="0.3295302" />
+      <window_info anchor="right" id="Database" order="7" weight="0.3295302" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="Bean Validation" order="10" />
@@ -1980,45 +1936,76 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
+    <entry file="file://$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/LogicInterfaces/IOfferLogic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="35" selection-start-column="35" selection-end-column="35" />
+        <state relative-caret-position="442">
+          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/build.gradle">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7b2a2c76-5cef-4394-bc5a-338ba8b214a5/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Offer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+        <state relative-caret-position="204">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/build.gradle">
+    <entry file="file://$PROJECT_DIR$/Services/src/test/java/com/kiddyMarket/LogicTests/OfferLogicTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        <state relative-caret-position="952">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Domain/build.gradle">
+    <entry file="file://$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Account.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="13" column="67" selection-start-line="13" selection-start-column="67" selection-end-line="13" selection-end-column="67" />
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Services/build.gradle">
+    <entry file="file://$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/LogicInterfaces/IAccountLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="85" lean-forward="true" selection-start-line="10" selection-start-column="85" selection-end-line="10" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/OfferLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="113" column="49" selection-start-line="113" selection-start-column="49" selection-end-line="113" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/Helper/RestCallLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/Constants/APIConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <caret line="6" column="69" lean-forward="true" selection-start-line="6" selection-start-column="69" selection-end-line="6" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/AccountLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-21">
+          <caret line="27" column="129" selection-start-line="27" selection-start-column="129" selection-end-line="27" selection-end-column="129" />
         </state>
       </provider>
     </entry>
@@ -2031,128 +2018,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Data/src/main/java/com/kiddyMarket/DataInterfaces/IOfferRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/src/main/resources/aplication.properties">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/App.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/5.0.9.RELEASE/1cfee1c1857cda6542f478ef8fe7d2fdb6c3b20/spring-beans-5.0.9.RELEASE-sources.jar!/org/springframework/beans/BeanUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/JwtAuthorizationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="52" column="64" lean-forward="true" selection-start-line="52" selection-start-column="64" selection-end-line="52" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/WebSecurity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="40" column="79" lean-forward="true" selection-start-line="40" selection-start-column="79" selection-end-line="40" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/Constants/SecurityConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Controllers/OfferController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1053#1054#0" expanded="true" />
-            <element signature="e#1100#1101#0" expanded="true" />
-            <element signature="e#1547#1548#0" expanded="true" />
-            <element signature="e#1592#1593#0" expanded="true" />
-            <element signature="method#getAllOffers#0;class#OfferController#0" />
-          </folding>
+        <state relative-caret-position="124">
+          <caret line="168" selection-start-line="168" selection-end-line="168" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/AuthLogic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="38" column="61" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="404">
+          <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/Constants/APIConstants.java">
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.909/WebController.java" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.184/SpringSecurityCustomizeAuthenticationProviderApplication.java" />
+    <entry file="file://$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Wrappers/AccountWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="79" selection-start-line="6" selection-start-column="79" selection-end-line="6" selection-end-column="79" />
+        <state relative-caret-position="153">
+          <caret line="9" column="91" selection-start-line="9" selection-start-column="91" selection-end-line="9" selection-end-column="91" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Services/src/test/java/com/kiddyMarket/LogicTests/OfferLogicTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Offer.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/5.0.8.RELEASE/eacb961f1d4b542fb4b4bcd1321d0ae9e4b93843/spring-security-core-5.0.8.RELEASE-sources.jar!/org/springframework/security/authentication/AuthenticationProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-          <folding>
-            <element signature="method#Offer#1;class#Offer#0" />
-          </folding>
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/LogicInterfaces/IOfferLogic.java">
+    <entry file="file://$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Wrappers/LoginWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/MoneyTransfer.java">
+    <entry file="file://$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Wrappers/BankAccountWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="25" lean-forward="true" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-          <folding>
-            <element signature="method#MoneyTransfer#0;class#MoneyTransfer#0" />
-          </folding>
+          <caret line="3" column="91" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Controllers/OfferController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/Wrappers/AccountFormWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -2163,25 +2088,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/Helper/RestCallLogic.java">
+    <entry file="file://$PROJECT_DIR$/Domain/src/main/java/com/kiddyMarket/Entities/MoneyTransfer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="34" column="19" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+        <state relative-caret-position="51">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="35" selection-start-column="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="67" selection-start-line="13" selection-start-column="67" selection-end-line="13" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Services/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/JwtAuthorizationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="21" column="69" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Wrapper/LoginWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/Constants/SecurityConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="79" lean-forward="true" selection-start-line="9" selection-start-column="79" selection-end-line="9" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Wrapper/TokenWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#351#352#0" expanded="true" />
+            <element signature="e#379#380#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Services/src/main/java/com/kiddyMarket/Logic/OfferLogic.java">
+    <entry file="file://$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/WebSecurity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+        <state relative-caret-position="68">
+          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/JwtAuthenticationProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
+          <folding>
+            <element signature="e#1236#1237#0" expanded="true" />
+            <element signature="e#1290#1291#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/src/main/java/com/kiddyMarket/Security/JwtAuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="75" column="30" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#OfferLogic#0;class#OfferLogic#0" />
-            <element signature="e#3038#3039#0" expanded="true" />
-            <element signature="e#3123#3124#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2189,6 +2210,66 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.5091954" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Data|Data</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.5091954" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>10</last-edited>
@@ -2196,6 +2277,18 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Gradle: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.5091954" />
               </list>
             </option>
           </splitter-proportions>

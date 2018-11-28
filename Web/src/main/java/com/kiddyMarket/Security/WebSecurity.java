@@ -9,7 +9,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -21,14 +20,13 @@ import static com.kiddyMarket.Security.Constants.SecurityConstants.*;
 //https://auth0.com/blog/implementing-jwt-authentication-on-spring-boot/
 @EnableWebSecurity
 public class WebSecurity extends WebSecurityConfigurerAdapter {
-    private UserDetailsService userDetailsService;
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    //Constructor gets authLogic for external authentication
+    private JwtAuthenticationProvider authProvider;
+
+    //Constructor gets authLogic for external authentication and creates a new auth provider
     @Autowired
     public WebSecurity(@Qualifier("authLogic") UserDetailsService userDetailsService){
-        this.userDetailsService = userDetailsService;
-        this.bCryptPasswordEncoder = new BCryptPasswordEncoder();
+        this.authProvider = new JwtAuthenticationProvider(userDetailsService);
     }
 
     @Override
@@ -38,13 +36,15 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                 .antMatchers("/v2/api-docs", "/configuration/ui", "/swagger-resources", "/configuration/security", "/swagger-ui.html", "/webjars/**", "/swagger-resources/configuration/ui", "/swagger-resources/configuration/security").permitAll()
                 .anyRequest().authenticated()
                 .and()
+                .addFilter(new JwtAuthenticationFilter(authenticationManager()))
                 .addFilter(new JwtAuthorizationFilter(authenticationManager()))
+                .authenticationProvider(authProvider)
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
 
     @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder);
+        auth.authenticationProvider(authProvider);
     }
 
     @Bean

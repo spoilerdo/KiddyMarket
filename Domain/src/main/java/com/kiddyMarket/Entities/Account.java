@@ -12,6 +12,7 @@ import java.util.List;
 public class Account extends ResourceSupport {
     @Id
     private int accountId;
+    private float balance;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
