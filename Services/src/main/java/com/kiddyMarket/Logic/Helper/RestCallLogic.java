@@ -44,6 +44,17 @@ public class RestCallLogic {
         return response;
     }
 
+    public <T> ResponseEntity<T> getCallWithStatusCheck(String url, Class<T> type){
+        ResponseEntity<T> response = getCall(url, type);
+
+        //check if status code is correct
+        if(response.getStatusCode() != HttpStatus.OK){
+            throw new IllegalArgumentException(response.getBody().toString());
+        }
+
+        return response;
+    }
+
     public <T> ResponseEntity<T> getCall(String url, Class<T> type){
         //check if auth header exists
         if(request.getHeader(AUTHHEADER).isEmpty()){
@@ -54,18 +65,10 @@ public class RestCallLogic {
         HttpHeaders headers = new HttpHeaders();
         headers.set(AUTHHEADER, request.getHeader(AUTHHEADER)); //TODO: als de get call niet werkt dan is dit waarschijnlijk fout
 
-        //make a empty entity
         HttpEntity<?> httpEntity = new HttpEntity<>("", headers);
 
         //get call
         RestTemplate restCall = new RestTemplate();
-        ResponseEntity<T> response = restCall.exchange(url, HttpMethod.GET, httpEntity, type);
-
-        //check if status code is correct
-        if(response.getStatusCode() != HttpStatus.OK){
-            throw new IllegalArgumentException(response.getBody().toString());
-        }
-
-        return response;
+        return restCall.exchange(url, HttpMethod.GET, httpEntity, type);
     }
 }

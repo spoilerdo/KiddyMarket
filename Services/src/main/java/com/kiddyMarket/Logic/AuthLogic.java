@@ -12,6 +12,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import static java.util.Collections.emptyList;
@@ -34,24 +36,6 @@ public class AuthLogic implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        ResponseEntity<JSONObject> responseEntityAccount = restCall.getCall(AUTHCALL, JSONObject.class);
-
-        JSONObject account = responseEntityAccount.getBody();
-        try{
-            int accountId = account.getInt("id");
-            Optional<Account> foundAccount = accountRepository.findById(accountId);
-
-            if(!foundAccount.isPresent()){
-                //save user to market db if it doesn't exist yet
-                Account newAccount = new Account();
-                newAccount.setAccountId(accountId);
-                accountRepository.save(newAccount);
-            }
-
-            //return spring-security user
-            return new User(account.getString("username"), account.getString("password"), emptyList());
-        } catch (JSONException e){
-            throw new UsernameNotFoundException(username);
-        }
+        return null;
     }
 }

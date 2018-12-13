@@ -29,6 +29,7 @@ public class OfferLogic implements IOfferLogic {
 
         //check if all offer values are not null
         checkOfferValuesEmpty(offer);
+
         offer.setSenderId(accountId);
 
         return offerRepository.save(offer);
@@ -105,12 +106,12 @@ public class OfferLogic implements IOfferLogic {
     }
 
     private int checkUserExists() {
-        return restCall.getCall(AUTHCALL, Account.class).getBody().getAccountId();
+        return restCall.getCallWithStatusCheck(AUTHCALL, Account.class).getBody().getAccountId();
     }
 
     private void checkUserOwnsOffer(int accountId, Offer offer){
         if(offer.getSenderId() != accountId){
-            throw new IllegalArgumentException("user with id: " + accountId + "doesn't have acces to this offer");
+            throw new IllegalArgumentException("User with id: " + accountId + "doesn't have acces to this offer");
         }
     }
 
