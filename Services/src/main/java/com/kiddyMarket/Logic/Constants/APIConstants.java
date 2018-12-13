@@ -1,10 +1,18 @@
 package com.kiddyMarket.Logic.Constants;
 
 public final class APIConstants {
-    public static final String AUTHCALL = "localhost:8888/accounts/";
+
+    private static final String BANKSERVER = "http://localhost:8888/";
+    private static final String INVENTORYSERVER = "http://localhost:8881/";
+
+    public static final String AUTH_ACCOUNTS = BANKSERVER + "accounts/";
     public static final String AUTHHEADER = "Authorization";
-    public static final String BANKCALL = "localhost:8888/bank/";
-    public static final String INVENTORYLOGIN = "localhost:8881/login";
-    public static final String TRANSFER_ITEM = "localhost:8881/inventory/transfer";
-    public static final String TRANSFER_MONEY = "localhost:8888/bank/transfer";
+
+    public static final String BANKCALL = BANKSERVER + "bank/";
+    public static final String TRANSFER_MONEY = BANKSERVER + "bank/transfer";
+    public static final String GET_BANK_ACCOUNTS = BANKSERVER + "bank/all/";
+
+    public static final String TRANSFER_ITEM = INVENTORYSERVER + "inventory/transfer";
+    public static final String INVENTORY_ACCOUNTS = INVENTORYSERVER + "inventory/account/";
+    public static final String INVENTORY_ITEM_GET = INVENTORYSERVER + "item/";
 }

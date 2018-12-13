@@ -2,15 +2,21 @@ package com.kiddyMarket.Controllers;
 
 import com.kiddyMarket.Entities.Offer;
 import com.kiddyMarket.Entities.Wrappers.LoginWrapper;
+import com.kiddyMarket.Entities.Wrappers.OfferItemWrapper;
 import com.kiddyMarket.LogicInterfaces.IOfferLogic;
+import com.kiddyMarket.Wrapper.OfferAcceptWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@RequestMapping("/offer")
+import java.security.Principal;
+
+@Controller
+@RequestMapping("/offers")
 public class OfferController {
     private IOfferLogic offerLogic;
 
@@ -19,28 +25,33 @@ public class OfferController {
         this.offerLogic = offerLogic;
     }
 
-    @PostMapping(path = "/")
-    public ResponseEntity<Offer> createOffer(@RequestBody Offer offer){
-        Offer createdOffer = offerLogic.createOffer(offer);
+    @GetMapping(path = "/{id}")
+    public ResponseEntity<OfferItemWrapper> getOffer(@PathVariable("id") int offerId){
+        return new ResponseEntity<>(offerLogic.getOfferDetails(offerId), HttpStatus.OK);
+    }
+
+    @PostMapping
+    public ResponseEntity<Offer> createOffer(Authentication user, @RequestBody Offer offer){
+        Offer createdOffer = offerLogic.createOffer(user, offer);
         return new ResponseEntity<>(createdOffer, HttpStatus.OK);
     }
 
     @DeleteMapping(path = "/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public void deleteOffer(@PathVariable("id") int offerId){
-        offerLogic.deleteOffer(offerId);
+    public void deleteOffer(Authentication user, @PathVariable("id") int offerId){
+        offerLogic.deleteOffer(user, offerId);
     }
 
-    @PutMapping(path = "/")
-    public ResponseEntity<Offer> updateOffer(@RequestBody Offer offer){
-        Offer updatedOffer = offerLogic.updateOffer(offer);
+    @PutMapping
+    public ResponseEntity<Offer> updateOffer(Authentication user, @RequestBody Offer offer){
+        Offer updatedOffer = offerLogic.updateOffer(user, offer);
         return new ResponseEntity<>(updatedOffer, HttpStatus.OK);
     }
 
     @PostMapping(path = "/accept")
     @ResponseStatus(HttpStatus.OK)
-    public void acceptOffer(@RequestBody Offer offer){
-        offerLogic.acceptOffer(offer);
+    public void acceptOffer(Authentication user, @RequestBody OfferAcceptWrapper wrapper){
+        offerLogic.acceptOffer(user, wrapper.getOffer(), wrapper.getBankNumber());
     }
 
     @GetMapping(path = "/all")
@@ -48,7 +59,4 @@ public class OfferController {
         Iterable<Offer> offers = offerLogic.getAllOffers();
         return new ResponseEntity<>(offers, HttpStatus.OK);
     }
-
-    //---REMOVE---
-
 }

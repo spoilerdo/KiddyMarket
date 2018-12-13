@@ -1,6 +1,7 @@
 package com.kiddyMarket.Security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.kiddyMarket.Entities.JwtEntities.JwtUser;
 import com.kiddyMarket.Wrapper.LoginWrapper;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -59,10 +60,12 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         Date expirationDate = Date.valueOf(LocalDate.now().plusDays(1));
         Date currentDate = Date.valueOf(LocalDate.now());
 
+        JwtUser user = (JwtUser) auth.getPrincipal();
         //get username and make a claim with roles
         String subject = ((User)auth.getPrincipal()).getUsername();
         Claims claim = Jwts.claims().setSubject(subject);
         claim.put("scopes", auth.getAuthorities().stream().map(s -> s.toString()).collect(Collectors.toList()));
+        claim.put("userID", user.getUserID());
 
         //build token
         String token =  Jwts.builder()
@@ -77,7 +80,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         //Convert token to json and return to the user
         JSONObject tokenResponse = new JSONObject();
         try {
-            tokenResponse.put("token",  token);
+            tokenResponse.put("token", token);
         } catch (JSONException e) {
             logger.error(e.getMessage());
         }

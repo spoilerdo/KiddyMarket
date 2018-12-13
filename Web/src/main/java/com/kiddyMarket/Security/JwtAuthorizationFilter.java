@@ -45,17 +45,23 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
     private UsernamePasswordAuthenticationToken getAuthentication(HttpServletRequest request){
         String token = request.getHeader(HEADER_STRING);
         if (token != null) {
-            // parse the token.
-            Claims userClaim =  Jwts.parser().setSigningKey(JWTKEY).parseClaimsJws(token.replace(TOKEN_PREFIX, "")).getBody();
+            //decode token
+            Claims claims = Jwts.parser()
+                    .setSigningKey(JWTKEY)
+                    .parseClaimsJws(token.replace(TOKEN_PREFIX, ""))
+                    .getBody();
 
-            //retrieve roles from JWT token and convert to grantedauthority
-            List<String> scopes = (List<String>) userClaim.get("scopes");
+            //get credentials
+            int UserId = (int) claims.get("userID");
+
+            //get the scopes and convert them to authorities
+            List<String> scopes = (List<String>) claims.get("scopes");
             List<GrantedAuthority> authorities = scopes.stream()
                     .map(authority -> new SimpleGrantedAuthority(authority))
                     .collect(Collectors.toList());
 
-            if (userClaim.getSubject() != null) {
-                return new UsernamePasswordAuthenticationToken(userClaim.getSubject(), null, authorities);
+            if (claims.getSubject() != null) {
+                return new UsernamePasswordAuthenticationToken(UserId, null, authorities);
             }
             return null;
         }

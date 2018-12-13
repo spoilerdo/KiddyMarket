@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.springframework.hateoas.ResourceSupport;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,17 +19,24 @@ public class Offer extends ResourceSupport{
     private int offerId;
     private int itemId;
     private int senderId;
+    private int senderBankNumber;
+    private String offerName;
     private Float price;
+    private boolean sold = false;
+    private boolean news = true;
+    private Date offerCreated = new Date();
 
     @JsonBackReference
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "offers")
     private Set<Account> accounts = new HashSet<>();
 
-    public Offer() {}
+    public Offer() {
+    }
 
-    public Offer(int itemId, int senderId, Float price) {
+    public Offer(int itemId, int senderId, int senderBankNumber, Float price) {
         this.itemId = itemId;
         this.senderId = senderId;
+        this.senderBankNumber = senderBankNumber;
         this.price = price;
     }
 
@@ -55,11 +64,55 @@ public class Offer extends ResourceSupport{
         this.senderId = senderId;
     }
 
+    public int getSenderBankNumber() {
+        return senderBankNumber;
+    }
+
+    public void setSenderBankNumber(int senderBankNumber) {
+        this.senderBankNumber = senderBankNumber;
+    }
+
+    public String getOfferName() {
+        return offerName;
+    }
+
+    public void setOfferName(String offerName) {
+        this.offerName = offerName;
+    }
+
     public Float getPrice() {
         return price;
     }
 
     public void setPrice(Float price) {
         this.price = price;
+    }
+
+    public boolean isSold() {
+        return sold;
+    }
+
+    public void setSold(boolean sold) {
+        this.sold = sold;
+    }
+
+    public boolean isNews() {
+        return news;
+    }
+
+    public void setNews(boolean news) {
+        this.news = news;
+    }
+
+    public Date getOfferCreated() {
+        return offerCreated;
+    }
+
+    public Set<Account> getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(Set<Account> accounts) {
+        this.accounts = accounts;
     }
 }

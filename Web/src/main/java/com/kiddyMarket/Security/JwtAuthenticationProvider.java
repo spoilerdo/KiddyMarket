@@ -2,6 +2,8 @@ package com.kiddyMarket.Security;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.kiddyMarket.Entities.JwtEntities.JwtUser;
+import com.kiddyMarket.Logic.AuthLogic;
 import com.kiddyMarket.Wrapper.LoginWrapper;
 import com.kiddyMarket.Wrapper.TokenWrapper;
 import io.jsonwebtoken.Claims;
@@ -30,15 +32,17 @@ import static com.kiddyMarket.Security.Constants.SecurityConstants.INVENTORY_LOG
 import static com.kiddyMarket.Security.Constants.SecurityConstants.JWTKEY;
 
 public class JwtAuthenticationProvider extends AbstractUserDetailsAuthenticationProvider {
-    private UserDetailsService userDetailsImpl;
 
-    public JwtAuthenticationProvider(UserDetailsService userDetailsImpl) {
+    private AuthLogic userDetailsImpl;
+
+    public JwtAuthenticationProvider(AuthLogic userDetailsImpl) {
         this.userDetailsImpl = userDetailsImpl;
     }
 
     @Override
     protected void additionalAuthenticationChecks(UserDetails userDetails, UsernamePasswordAuthenticationToken authentication) throws AuthenticationException {
-        userDetailsImpl.loadUserByUsername(userDetails.getUsername());
+        JwtUser user = (JwtUser) userDetails;
+        userDetailsImpl.loadUserById(user.getUserID(), user.getUsername());
     }
 
     @Override
@@ -54,11 +58,13 @@ public class JwtAuthenticationProvider extends AbstractUserDetailsAuthentication
 
         //get the user roles
         List<String> scopes = (List<String>) claims.get("scopes");
+
+        int UserId = (int) claims.get("userID");
         List<GrantedAuthority> authorities = scopes.stream()
                 .map(authority -> new SimpleGrantedAuthority(authority))
                 .collect(Collectors.toList());
 
-        return new User(username, authentication.getCredentials().toString(), authorities);
+        return new JwtUser(UserId, username, authentication.getCredentials().toString(), authorities);
     }
 
     private String retrieveAccountData(LoginWrapper loginWrapper){

@@ -2,40 +2,36 @@ package com.kiddyMarket.Logic;
 
 import com.kiddyMarket.DataInterfaces.IAccountRepository;
 import com.kiddyMarket.Entities.Account;
+import com.kiddyMarket.Entities.JwtEntities.JwtUserPrincipal;
 import com.kiddyMarket.Logic.Helper.RestCallLogic;
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 
-import javax.servlet.http.HttpServletRequest;
-import static java.util.Collections.emptyList;
 import java.util.Optional;
 
-import static com.kiddyMarket.Logic.Constants.APIConstants.*;
-
 @Service
-public class AuthLogic implements UserDetailsService {
-    private HttpServletRequest request;
+public class AuthLogic {
     private IAccountRepository accountRepository;
-    private RestCallLogic restCall;
 
     @Autowired
-    public AuthLogic(HttpServletRequest request, IAccountRepository accountRepository, RestCallLogic restCall){
-        this.request = request;
+    public AuthLogic(IAccountRepository accountRepository, RestCallLogic restCall){
         this.accountRepository = accountRepository;
-        this.restCall = restCall;
     }
 
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return null;
+    public UserDetails loadUserById(int UserId, String username) throws UsernameNotFoundException {
+        Optional<Account> foundAccount = accountRepository.findByUsername(username);
+
+        //check if user has logged in to the Market before, if not create new account
+        Account account;
+        if(!foundAccount.isPresent()){
+            account = accountRepository.save(new Account(UserId, username));
+        } else{
+            account = foundAccount.get();
+        }
+
+        return new JwtUserPrincipal(account);
     }
 }

@@ -1,5 +1,6 @@
 package com.kiddyMarket.Logic.Helper;
 
+import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
@@ -21,54 +22,43 @@ public class RestCallLogic {
         this.request = request;
     }
 
-    public <T> ResponseEntity<T> postCall(String url, String data, Class<T> type){
-        //build-in spring uri builder to avoid uri-syntax-exception handling
-        URI uri = UriComponentsBuilder.fromUriString(url).build().toUri();
-
-        //set the requested headers and fill in the body
-        RequestEntity<String> request = RequestEntity
-                .post(uri)
-                .accept(MediaType.APPLICATION_JSON)
-                .header(AUTHHEADER, this.request.getHeader(AUTHHEADER))
-                .body(data);
-
-        //post call
-        RestTemplate restCall = new RestTemplate();
-        ResponseEntity<T> response = restCall.exchange(request, type);
+    public <T> ResponseEntity<T> callWithStatusCheck(String url, Object data, Class<T> type, HttpMethod method, boolean checkHeader){
+        ResponseEntity<T> response = call(url, data, type, method, checkHeader);
 
         //check if status code is correct
         if(response.getStatusCode() != HttpStatus.OK){
-            throw new IllegalArgumentException(response.getBody().toString());
+            throw new IllegalArgumentException("something went wrong with the API call");
         }
 
         return response;
     }
 
-    public <T> ResponseEntity<T> getCallWithStatusCheck(String url, Class<T> type){
-        ResponseEntity<T> response = getCall(url, type);
-
-        //check if status code is correct
-        if(response.getStatusCode() != HttpStatus.OK){
-            throw new IllegalArgumentException(response.getBody().toString());
-        }
-
-        return response;
-    }
-
-    public <T> ResponseEntity<T> getCall(String url, Class<T> type){
-        //check if auth header exists
-        if(request.getHeader(AUTHHEADER).isEmpty()){
-            throw new IllegalArgumentException("No " + AUTHHEADER + " header found");
-        }
-
-        //set the requested headers
+    public <T> ResponseEntity<T> call(String url, Object data, Class<T> type, HttpMethod method, boolean checkHeader){
         HttpHeaders headers = new HttpHeaders();
-        headers.set(AUTHHEADER, request.getHeader(AUTHHEADER)); //TODO: als de get call niet werkt dan is dit waarschijnlijk fout
+        Gson gson = new Gson();
 
-        HttpEntity<?> httpEntity = new HttpEntity<>("", headers);
+        headers.setContentType(MediaType.APPLICATION_JSON);
 
-        //get call
+        if(checkHeader){
+            //check if auth header exists
+            if(request.getHeader(AUTHHEADER).isEmpty()){
+                throw new IllegalArgumentException("No " + AUTHHEADER + " header found");
+            }
+
+            //set the requested headers
+            headers.set(AUTHHEADER, request.getHeader(AUTHHEADER));
+        }
+
+        //if the call needs a body it will be constructed here
+        HttpEntity<?> httpEntity;
+        if(data == null){
+            httpEntity = new HttpEntity<>("", headers);
+        }else{
+            httpEntity = new HttpEntity<>(gson.toJson(data), headers);
+        }
+
+        //make the rest call
         RestTemplate restCall = new RestTemplate();
-        return restCall.exchange(url, HttpMethod.GET, httpEntity, type);
+        return restCall.exchange(url, method, httpEntity, type);
     }
 }
