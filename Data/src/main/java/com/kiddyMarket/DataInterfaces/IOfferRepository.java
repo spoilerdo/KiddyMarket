@@ -7,4 +7,5 @@ import java.util.Optional;
 
 public interface IOfferRepository extends CrudRepository<Offer, Integer> {
     Iterable<Offer> findTop10ByOrderByOfferId();
+    void deleteOfferBySenderIdAndSold(int id, boolean sold);
 }

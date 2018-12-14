@@ -16,6 +16,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -97,18 +98,22 @@ public class AccountLogic implements IAccountLogic {
     }
 
     @Override
+    @Transactional
     public void changeOfferNews(int accountId) {
         Account foundAccount = checkAccountExists(accountId);
 
-        //delete all the offers that are sold
+        //get all unsold offers
         Set<Offer> unSoldOffers = foundAccount.getOffers().stream().filter(offer -> !offer.isSold()).collect(Collectors.toSet());
 
-        //change all the offers New bool to false
+        //change all the unsold offers New bool to false
         unSoldOffers.forEach(offer -> offer.setNews(false));
 
-        //update the offers list
+        //update the account_offer table
         foundAccount.setOffers(unSoldOffers);
         accountRepository.save(foundAccount);
+
+        //update offer table
+        offerRepository.deleteOfferBySenderIdAndSold(foundAccount.getAccountId(), true);
     }
 
     //region Generic exception method
