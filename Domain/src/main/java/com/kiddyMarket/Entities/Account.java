@@ -15,7 +15,7 @@ public class Account extends ResourceSupport {
     @Id
     private int accountId;
     private String username;
-    private float buyTokens;
+    private int buyTokens;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
@@ -23,7 +23,7 @@ public class Account extends ResourceSupport {
             joinColumns = {@JoinColumn(name = "AccountId")},
             inverseJoinColumns = {@JoinColumn(name = "OfferId")}
     )
-    private Set<Offer> offers = new HashSet<>();
+    private List<Offer> offers = new ArrayList<>();
 
     public Account() {}
 
@@ -44,19 +44,19 @@ public class Account extends ResourceSupport {
         return username;
     }
 
-    public void setBuyTokens(float buyTokens) {
+    public void setBuyTokens(int buyTokens) {
         this.buyTokens = buyTokens;
     }
 
-    public float getBuyTokens() {
+    public int getBuyTokens() {
         return buyTokens;
     }
 
-    public Set<Offer> getOffers() {
+    public List<Offer> getOffers() {
         return offers;
     }
 
-    public void setOffers(Set<Offer> offers) {
+    public void setOffers(List<Offer> offers) {
         this.offers = offers;
     }
 }

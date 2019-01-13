@@ -3,7 +3,7 @@ package com.kiddyMarket.LogicTests;
 import com.kiddyMarket.DataInterfaces.IAccountRepository;
 import com.kiddyMarket.Entities.Account;
 import com.kiddyMarket.Logic.AuthLogic;
-import com.kiddyMarket.Logic.OfferLogic;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -13,9 +13,12 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import java.util.Optional;
 
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -42,17 +45,35 @@ public class AuthLogicTest {
 
     @Test
     public void testLoadUserByUsernameValidHasNoAccount(){
-        Account dymmyAccount = new Account(1, "dummy");
+        Account dummyAccount = new Account(1, "dummy");
 
-        _logic.loadUserById(dymmyAccount.getAccountId(), dymmyAccount.getUsername());
+        when(accountRepository.findByUsername(dummyAccount.getUsername())).thenReturn(Optional.empty());
+        when(accountRepository.save(dummyAccount)).thenReturn(dummyAccount);
 
-        verify(accountRepository, times(1)).save(dymmyAccount);
+        UserDetails user = _logic.loadUserById(dummyAccount.getAccountId(), dummyAccount.getUsername());
+
+        verify(accountRepository, times(1)).save(dummyAccount);
+        Assert.assertNotEquals(user.getUsername(), "");
+    }
+
+    @Test
+    public void testLoadUserByUsernameInvalid(){
+        Account dummyAccount = new Account(1, "");
+
+        exception.expect(UsernameNotFoundException.class);
+
+        _logic.loadUserById(dummyAccount.getAccountId(), dummyAccount.getUsername());
     }
 
     @Test
     public void testLoadUserByUsernameValidHasAccount(){
-        Account dymmyAccount = new Account(1, "dummy");
+        Account dummyAccount = new Account(1, "dummy");
 
-        _logic.loadUserById(dymmyAccount.getAccountId(), dymmyAccount.getUsername());
+        when(accountRepository.findByUsername(dummyAccount.getUsername())).thenReturn(Optional.of(dummyAccount));
+
+        UserDetails user = _logic.loadUserById(dummyAccount.getAccountId(), dummyAccount.getUsername());
+
+        verify(accountRepository, times(0)).save(dummyAccount);
+        Assert.assertNotEquals(user.getUsername(), "");
     }
 }

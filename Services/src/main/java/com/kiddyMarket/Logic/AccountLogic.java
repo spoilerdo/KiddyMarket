@@ -38,7 +38,7 @@ public class AccountLogic implements IAccountLogic {
     }
 
     @Override
-    public AccountWrapper CreateBankAccount(AccountFormWrapper accountFormWrapper) {
+    public AccountWrapper createBankAccount(AccountFormWrapper accountFormWrapper) {
         //check if required values are filled in
         if(Strings.isNullOrEmpty(accountFormWrapper.getUsername()) || Strings.isNullOrEmpty(accountFormWrapper.getPassword()) || Strings.isNullOrEmpty(accountFormWrapper.getEmail())){
             throw new IllegalArgumentException("Values cannot be null");
@@ -68,9 +68,12 @@ public class AccountLogic implements IAccountLogic {
     }
 
     @Override
-    public void DeleteBankAccount(int accountId) {
+    public void deleteBankAccount(int accountId) {
         //check if bank account exists
-        restCall.callWithStatusCheck(AUTH_ACCOUNTS + accountId, null, AccountWrapper.class, HttpMethod.GET, true);
+        AccountWrapper account = restCall.callWithStatusCheck(AUTH_ACCOUNTS + accountId, null, AccountWrapper.class, HttpMethod.GET, true).getBody();
+        if(account == null || account.getUsername().equals("")){
+           throw new IllegalArgumentException("No account has been found with it: " + accountId);
+        }
 
         //delete bank-account
         restCall.call(AUTH_ACCOUNTS + accountId, null, int.class, HttpMethod.DELETE, true);
@@ -83,7 +86,14 @@ public class AccountLogic implements IAccountLogic {
     }
 
     @Override
-    public Set<Offer> getOffersFromAccount(int accountId) {
+    public int getBuyTokens(int accountId) {
+        Account foundAccount = checkAccountExists(accountId);
+
+        return foundAccount.getBuyTokens();
+    }
+
+    @Override
+    public List<Offer> getOffersFromAccount(int accountId) {
         Account foundAccount = checkAccountExists(accountId);
 
         return foundAccount.getOffers();
@@ -103,7 +113,7 @@ public class AccountLogic implements IAccountLogic {
         Account foundAccount = checkAccountExists(accountId);
 
         //get all unsold offers
-        Set<Offer> unSoldOffers = foundAccount.getOffers().stream().filter(offer -> !offer.isSold()).collect(Collectors.toSet());
+        List<Offer> unSoldOffers = foundAccount.getOffers().stream().filter(offer -> !offer.isSold()).collect(Collectors.toList());
 
         //change all the unsold offers New bool to false
         unSoldOffers.forEach(offer -> offer.setNews(false));

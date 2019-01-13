@@ -2,6 +2,7 @@ package com.kiddyMarket.Entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.kiddyMarket.Entities.Enums.Quality;
 import org.springframework.hateoas.ResourceSupport;
 
 import javax.persistence.*;
@@ -25,6 +26,7 @@ public class Offer extends ResourceSupport{
     private boolean sold = false;
     private boolean news = true;
     private Date offerCreated = new Date();
+    private Quality quality;
 
     @JsonBackReference
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "offers")
@@ -106,6 +108,14 @@ public class Offer extends ResourceSupport{
 
     public Date getOfferCreated() {
         return offerCreated;
+    }
+
+    public void setQuality(Quality quality) {
+        this.quality = quality;
+    }
+
+    public Quality getQuality() {
+        return quality;
     }
 
     public Set<Account> getAccounts() {

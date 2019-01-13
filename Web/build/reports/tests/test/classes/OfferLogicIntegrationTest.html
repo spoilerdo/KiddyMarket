@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class OfferLogicIntegrationTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class OfferLogicIntegrationTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; OfferLogicIntegrationTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.344s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testCreateOffer</td>
+<td class="success">0.344s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2019-01-09 16:11:42.559  INFO 16752 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [OfferLogicIntegrationTest], using SpringBootContextLoader
+2019-01-09 16:11:42.560  INFO 16752 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [OfferLogicIntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-01-09 16:11:42.564  INFO 16752 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-01-09 16:11:42.565  INFO 16752 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@16bbbf94, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2f1ec94e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@48eaa64c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6c3bd9f3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@27b79cff, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7eba75fe, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@63ff64a3, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5139cd6e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4af2e3d2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@674a7af7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7f88c0c1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@60c530e3]
+2019-01-09 16:11:42.608  INFO 16752 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@64da6e7c testClass = OfferLogicIntegrationTest, testInstance = OfferLogicIntegrationTest@6f8aa063, testMethod = testCreateOffer@OfferLogicIntegrationTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@635f1502 testClass = OfferLogicIntegrationTest, locations = '{}', classes = '{class com.kiddyMarket.App, class com.kiddyMarket.App}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4cca86b1, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@24e5c6f4, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@762b995c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@6c8a78dd, org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@6edeca95], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@5f64c7b4]; rollback [true]
+Hibernate: insert into offer (item_id, news, offer_created, offer_name, price, quality, sender_bank_number, sender_id, sold) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into offer (item_id, news, offer_created, offer_name, price, quality, sender_bank_number, sender_id, sold) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select account0_.account_id as account_1_0_0_, account0_.buy_tokens as buy_toke2_0_0_, account0_.username as username3_0_0_ from account account0_ where account0_.account_id=?
+Hibernate: insert into account (buy_tokens, username, account_id) values (?, ?, ?)
+Hibernate: insert into offer (item_id, news, offer_created, offer_name, price, quality, sender_bank_number, sender_id, sold) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2019-01-09 16:11:42.924  INFO 16752 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@64da6e7c testClass = OfferLogicIntegrationTest, testInstance = OfferLogicIntegrationTest@6f8aa063, testMethod = testCreateOffer@OfferLogicIntegrationTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@635f1502 testClass = OfferLogicIntegrationTest, locations = '{}', classes = '{class com.kiddyMarket.App, class com.kiddyMarket.App}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4cca86b1, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@24e5c6f4, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@762b995c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@6c8a78dd, org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@6edeca95], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true]]
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 4.8</a> at 9 jan. 2019 16:11:43</p>
+</div>
+</div>
+</body>
+</html>

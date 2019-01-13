@@ -22,6 +22,11 @@ public class AuthLogic {
     }
 
     public UserDetails loadUserById(int UserId, String username) throws UsernameNotFoundException {
+
+        if(username.equals("")){
+            throw new UsernameNotFoundException("username cannot be empty");
+        }
+
         Optional<Account> foundAccount = accountRepository.findByUsername(username);
 
         //check if user has logged in to the Market before, if not create new account
