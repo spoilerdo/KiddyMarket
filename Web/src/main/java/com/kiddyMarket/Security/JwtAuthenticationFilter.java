@@ -19,6 +19,7 @@ import javax.servlet.FilterChain;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.nio.file.AccessDeniedException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.sql.Date;
@@ -47,7 +48,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                             new ArrayList<>())
             );
         } catch(IOException e) {
-            throw new RuntimeException(e);
+            throw new IllegalAccessError(e.getMessage());
         }
     }
 
@@ -76,7 +77,6 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                 .signWith(SignatureAlgorithm.HS512, JWTKEY)
                 .compact();
 
-        //TODO: maybe use GSON
         //Convert token to json and return to the user
         JSONObject tokenResponse = new JSONObject();
         try {

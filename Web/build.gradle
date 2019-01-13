@@ -13,6 +13,8 @@ dependencies {
     compile "io.springfox:springfox-swagger2:2.9.2"
     compile 'io.springfox:springfox-swagger-ui:2.9.2'
 
+    testCompile("com.h2database:h2")
+
     compile project(':Domain')
     compile project(':Data')
     compile project(':Services')

@@ -54,6 +54,12 @@ public class OfferLogic implements IOfferLogic {
         foundAccount.getOffers().add(offer);
         offer.getAccounts().add(foundAccount);
 
+        //check if item exists
+        ItemWrapper item = restCall.callWithStatusCheck(INVENTORY_ITEM_GET + offer.getItemId(), null, ItemWrapper.class, HttpMethod.GET, false).getBody();
+
+        //set item quality in offer
+        offer.setQuality(item.getQuality());
+
         //add a buyToken to the user's account so it can buy another item
         foundAccount.setBuyTokens(foundAccount.getBuyTokens() + 1);
 

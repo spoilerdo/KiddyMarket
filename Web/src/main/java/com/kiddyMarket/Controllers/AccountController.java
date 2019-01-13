@@ -7,7 +7,6 @@ import com.kiddyMarket.LogicInterfaces.IAccountLogic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,19 +24,25 @@ public class AccountController {
 
     @PostMapping
     public ResponseEntity<AccountWrapper> createAccount(@RequestBody AccountFormWrapper accountForm){
-        AccountWrapper createdOffer = accountLogic.CreateBankAccount(accountForm);
+        AccountWrapper createdOffer = accountLogic.createBankAccount(accountForm);
         return new ResponseEntity<>(createdOffer, HttpStatus.OK);
     }
 
     @DeleteMapping(path = "/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void deleteAccount(@PathVariable("id") int accountId){
-        accountLogic.DeleteBankAccount(accountId);
+        accountLogic.deleteBankAccount(accountId);
+    }
+
+    @GetMapping(path = "/tokens/{id}")
+    public ResponseEntity<Integer> getBuyTokens(@PathVariable("id") int accountId){
+        int tokens = accountLogic.getBuyTokens(accountId);
+        return new ResponseEntity<>(tokens, HttpStatus.OK);
     }
 
     @GetMapping(path = "/offers/{id}")
-    public ResponseEntity<Set<Offer>> getAllOffersFromAccount(@PathVariable("id") int accountId){
-        Set<Offer> offers = accountLogic.getOffersFromAccount(accountId);
+    public ResponseEntity<List<Offer>> getAllOffersFromAccount(@PathVariable("id") int accountId){
+        List<Offer> offers = accountLogic.getOffersFromAccount(accountId);
         return new ResponseEntity<>(offers, HttpStatus.OK);
     }
 

@@ -13,4 +13,8 @@ public class AccountWrapper {
         this.email = email;
         this.phonenr = phonenr;
     }
+
+    public String getUsername() {
+        return username;
+    }
 }

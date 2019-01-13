@@ -2,6 +2,10 @@ package com.kiddyMarket.Logic.Constants;
 
 public final class APIConstants {
 
+    private APIConstants() {
+        throw new IllegalStateException("Utility class");
+    }
+
     private static final String BANKSERVER = "http://localhost:8888/";
     private static final String INVENTORYSERVER = "http://localhost:8881/";
 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kiddyMarket.LogicTests.AuthLogicTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-01-09T15:11:24" hostname="DESKTOP-76HSFAI" time="0.006">
+  <properties/>
+  <testcase name="testLoadUserByUsernameValidHasAccount" classname="com.kiddyMarket.LogicTests.AuthLogicTest" time="0.002"/>
+  <testcase name="testLoadUserByUsernameValidHasNoAccount" classname="com.kiddyMarket.LogicTests.AuthLogicTest" time="0.001"/>
+  <testcase name="testLoadUserByUsernameInvalid" classname="com.kiddyMarket.LogicTests.AuthLogicTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
