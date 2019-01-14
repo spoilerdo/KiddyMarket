@@ -4,9 +4,7 @@ pipeline {
     stage('Test') {
       steps {
         sh '''chmod +x gradlew
-./gradlew cleanTest test'''
-        sh '''chmod +x gradlew
-./gradlew :Services:showReport'''
+./gradlew cleanTest :Services:test'''
       }
     }
     stage('Build') {
